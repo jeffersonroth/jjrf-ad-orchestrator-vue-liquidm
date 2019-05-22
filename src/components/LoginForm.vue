@@ -105,7 +105,7 @@ export default {
   },
   metaInfo () {
     return {
-      title: 'Super Secret | Login'
+      title: 'Ads Campaign Manager | Login'
     }
   }
 }
