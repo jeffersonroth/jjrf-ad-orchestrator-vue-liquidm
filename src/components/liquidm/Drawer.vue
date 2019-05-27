@@ -1,6 +1,6 @@
 <template>
   <v-navigation-drawer
-    id="app-drawer"
+    id="liquidm-drawer"
     v-model="inputValue"
     app
     dark
@@ -78,42 +78,42 @@ export default {
     logo: require('@/assets/img/logo.png'),
     links: [
       {
-        to: '/',
+        to: '/liquidm/dashboard',
         icon: 'mdi-view-dashboard',
         text: 'Dashboard'
       },
       {
-        to: '/dashboard/user-profile',
-        icon: 'mdi-account',
-        text: 'User Profile'
-      },
-      {
-        to: '/dashboard/table-list',
-        icon: 'mdi-clipboard-outline',
-        text: 'Table List'
-      },
-      {
-        to: '/dashboard/user-tables',
+        to: '/liquidm/campaigns',
         icon: 'mdi-table-edit',
-        text: 'Users Table'
+        text: 'Campaigns'
       },
       {
-        to: '/dashboard/typography',
-        icon: 'mdi-format-font',
-        text: 'Typography'
+        to: '/liquidm/reports',
+        icon: 'mdi-clipboard-outline',
+        text: 'Reports'
       },
       {
-        to: '/dashboard/icons',
+        to: '/liquidm/stats',
         icon: 'mdi-chart-bubble',
-        text: 'Icons'
+        text: 'Data Analysis'
       },
       {
-        to: '/dashboard/maps',
+        to: '/liquidm/geo',
         icon: 'mdi-map-marker',
-        text: 'Maps'
+        text: 'Geo'
       },
       {
-        to: '/dashboard/notifications',
+        to: '/liquidm/accounts',
+        icon: 'mdi-account',
+        text: 'Accounts'
+      },
+      {
+        to: '/liquidm/templates',
+        icon: 'mdi-format-font',
+        text: 'Templates'
+      },
+      {
+        to: '/liquidm/notifications',
         icon: 'mdi-bell',
         text: 'Notifications'
       },
@@ -155,9 +155,13 @@ export default {
 </script>
 
 <style lang="scss">
-  #app-drawer {
+  #liquidm-drawer {
     .v-list__tile {
       border-radius: 4px;
+      align-items: left !important;
+      align-self: left !important;
+      text-align: left !important;
+      margin-left: 0px !important;
 
       &--buy {
         margin-top: auto;

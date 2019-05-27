@@ -46,7 +46,28 @@ export default [
       requiresAuth: false
     },
     component: () =>
-      import(/* webpackChunkName: "routes" */ `@/views/LiquidM.vue`)
+      import(/* webpackChunkName: "routes" */ `@/views/LiquidM.vue`),
+      children: [
+        {
+          path: 'dashboard',
+          name: 'Dashboard',
+          component: () => import(`@/components/liquidm/Dashboard.vue`)
+        },
+        {
+          path: 'campaigns',
+          meta: {
+            name: 'Campaigns',
+          },
+          component: () => import(`@/components/liquidm/Campaigns.vue`)
+        },
+        {
+          path: 'reports',
+          meta: {
+            name: 'Reports',
+          },
+          component: () => import(`@/components/liquidm/Reports.vue`)
+        }
+      ]
   },
   // add any extra routes that you want rendered in the dashboard as a child below. Change toolbar names here
   {
