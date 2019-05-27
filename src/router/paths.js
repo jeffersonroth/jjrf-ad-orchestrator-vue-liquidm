@@ -39,6 +39,15 @@ export default [
       }
     ]
   },
+  {
+    path: '/liquidm',
+    meta: {
+      name: 'LiquidM',
+      requiresAuth: false
+    },
+    component: () =>
+      import(/* webpackChunkName: "routes" */ `@/views/LiquidM.vue`)
+  },
   // add any extra routes that you want rendered in the dashboard as a child below. Change toolbar names here
   {
     path: '/dashboard',

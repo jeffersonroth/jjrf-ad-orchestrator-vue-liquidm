@@ -24,12 +24,12 @@
           >
             <v-img
               :src="logo"
-              height="64"
+              height="40"
               contain
             />
           </v-list-tile-avatar>
           <v-list-tile-title class="title">
-            Ads Campaign Manager
+            {{ approute }}
           </v-list-tile-title>
         </v-list-tile>
         <v-divider/>
@@ -70,8 +70,12 @@ import {
 } from 'vuex'
 
 export default {
+  name: "Drawer",
+  props: {
+    approute: String
+  },
   data: () => ({
-    logo: require('@/assets/img/redditicon.png'),
+    logo: require('@/assets/img/logo.png'),
     links: [
       {
         to: '/',
